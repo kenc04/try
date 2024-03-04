@@ -1,0 +1,129 @@
+/*Base Styling*/
+body {
+    background-color: rgb(27, 27, 27);
+    color: rgb(255, 255, 255);
+    margin: 70px 0 0 0;
+    height: 1000px;
+}
+
+header {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    background-color: rgb(60, 60, 60);
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+}
+
+.company-logo {
+    height: 70px;
+    margin: 0 10px;
+}
+
+.nav-bar ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    width: 100%;
+    font-size: 1.15em;
+}
+
+.nav-bar ul li a {
+    display: block;
+    font-weight: bold;
+    text-wrap: nowrap;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.nav-bar ul li a:hover {
+    background-color: rgb(153, 153, 153);
+}
+
+.nav-bar ul li a.active {
+    background-color: rgb(156, 156, 156);
+}
+
+.barbutton {
+    border: none;
+    display: none;
+    cursor: pointer;
+    background-color: rgb(60, 60, 60);
+    color: rgb(255,255,255);
+    font-size: 30px;
+    padding-right: 30px;
+}
+
+main {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-top: 5px;
+    max-width: 1300px;
+}
+
+@media (max-width: 840px) {
+    header {
+        justify-content: space-between;
+    }
+
+    main {
+        max-width: 750px;
+    }
+
+    .barbutton {
+        display: block;
+    }
+
+    #welcome {
+        width: 80%;
+    }
+
+    .nav-bar {
+        overflow: hidden;
+        position: absolute;
+        background-color: rgb(60, 60, 60);
+        left: 0;
+        right: 0;
+        top: 70px;
+        height: 0;
+        transition: .3s;
+    }
+
+    .nav-bar ul {
+        display: block;
+        background-color: rgb(255, 255, 255);
+        opacity: 0;
+        width: 95%;
+        padding: 12px 0;
+        margin: 10px auto;
+        border-radius: 10px;
+    }
+
+    .nav-bar.active ul {
+        opacity: 1;
+    }
+
+    .nav-bar ul li {
+        margin: auto;
+        padding: 5px;
+        width: 200px;
+    }
+
+    .nav-bar ul li a {
+        color: rgb(88, 88, 88);
+    }
+
+    .nav-bar ul li a:hover {
+        background-color: rgb(234, 234, 234);
+    }
+
+    .nav-bar.active {
+        height: 350px;
+    }
+}
