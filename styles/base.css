@@ -1,0 +1,236 @@
+/*Base Styling*/
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: rgb(27, 27, 27);
+    color: rgb(255, 255, 255);
+    margin: 70px 0 0 0;
+    height: 1000px;
+}
+
+header {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    background-color: rgb(60, 60, 60);
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    z-index: 100;
+}
+
+.company-logo {
+    height: 70px;
+    margin: 0 10px;
+}
+
+.nav-bar ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    width: 100%;
+    font-size: 1.15em;
+}
+
+.nav-bar ul li a {
+    display: block;
+    font-weight: bold;
+    text-wrap: nowrap;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.nav-bar ul li a:hover {
+    background-color: rgb(153, 153, 153);
+}
+
+.nav-bar ul li a.active {
+    background-color: rgb(156, 156, 156);
+}
+
+.barbutton {
+    border: none;
+    display: none;
+    cursor: pointer;
+    background-color: rgb(60, 60, 60);
+    color: rgb(255,255,255);
+    font-size: 30px;
+    padding-right: 30px;
+}
+
+main {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* Footer Style*/
+footer {
+    color: rgb(255, 255, 255);
+    background-color: rgb(27, 27, 27);
+    box-shadow: 0 -3px 50px rgb(255, 255, 255);
+    padding: 0 60px;
+    line-height: 25px;
+    margin-top: 1000px;
+}
+
+footer a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.footer-row {
+	display: grid;
+    transition: .7s;
+    column-gap: 150px;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+/*Footer Company Logo*/
+.footer-company-logo .company-logo {
+    height: 100px;
+    padding-top: 70px;
+}
+
+.footer-col h4 {
+    font-weight: bold;
+	position: relative;
+	font-size: 20px;
+}
+
+.footer-col h4::before {
+	content: '';
+	position: absolute;
+    box-sizing: border-box;
+    background-color: rgb(227, 43, 43);
+    height: 2px;
+	width: 60px;
+	bottom: -10px;
+}
+
+.footer-col ul {
+	list-style-type: none;
+    padding: 0;
+}
+
+.footer-col ul li a {
+    display: block;
+    text-decoration: none;
+	transition: all 0.3s ease;
+	font-size: 17px;
+}
+
+.footer-col ul li a:hover {    
+    font-weight: bold;
+	padding-left: 10px;
+}
+
+.footer-col .social-links a {
+    text-align: center;
+	display: inline-block;
+    transition: all 0.5s ease;
+    background-color: rgba(255, 255, 255, 0.219);
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 50%;
+	margin: 0 10px 10px 0;
+}
+
+.footer-col .social-links a:hover{
+    color: rgb(34, 35, 41);
+	background-color: rgb(255, 255, 255);
+}
+
+.copy {
+    font-size: small;
+    text-align: center;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 1160px) {
+    .footer-row {
+        column-gap: 50px;
+    }
+}
+
+@media only screen and (max-width: 860px) {
+    header {
+        justify-content: space-between;
+    }
+
+    main {
+        max-width: 750px;
+    }
+
+    .barbutton {
+        display: block;
+    }
+
+    .nav-bar {
+        overflow: hidden;
+        position: absolute;
+        background-color: rgb(60, 60, 60);
+        left: 0;
+        right: 0;
+        top: 70px;
+        height: 0;
+        transition: .3s;
+    }
+
+    .nav-bar ul {
+        display: block;
+        background-color: rgb(255, 255, 255);
+        opacity: 0;
+        width: 95%;
+        padding: 12px 0;
+        margin: 10px auto;
+        border-radius: 10px;
+    }
+
+    .nav-bar.active ul {
+        opacity: 1;
+    }
+
+    .nav-bar ul li {
+        margin: auto;
+        padding: 5px;
+        width: 200px;
+    }
+
+    .nav-bar ul li a {
+        color: rgb(88, 88, 88);
+    }
+
+    .nav-bar ul li a:hover {
+        background-color: rgb(234, 234, 234);
+    }
+
+    .nav-bar.active {
+        height: 360px;
+    }
+
+    .footer-row {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .footer-row{
+        grid-template-columns: 1fr;
+    }
+
+    .footer-company-logo {
+        text-align: center;
+        margin-right: 0;
+    }
+
+    .copy {
+        margin-top: 20px;
+    }
+}
+
